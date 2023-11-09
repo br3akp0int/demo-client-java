@@ -11,6 +11,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+
+      - name: Set Java Path
+        run: export PATH=$JAVA_HOME/bin:$PATH
         
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/gradle-jdk17@master
