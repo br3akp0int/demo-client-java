@@ -16,8 +16,7 @@ jobs:
         run: |
           echo " The Java Home set as of now"
           echo $PATH
-          java_dir = $PATH
-          ls java_dir
+          ls $PATH
           export PATH=$JAVA_HOME/bin:$PATH
           echo " The Java Home set as of now"
           echo $PATH
