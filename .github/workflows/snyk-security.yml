@@ -13,7 +13,14 @@ jobs:
           distribution: 'temurin'
 
       - name: Set Java Path
-        run: export PATH=$JAVA_HOME/bin:$PATH
+        run: |
+          echo " The Java Home set as of now"
+          echo $PATH
+          java_dir = $PATH
+          ls java_dir
+          export PATH=$JAVA_HOME/bin:$PATH
+          echo " The Java Home set as of now"
+          echo $PATH
         
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/gradle-jdk17@master
